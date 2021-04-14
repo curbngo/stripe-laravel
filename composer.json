@@ -1,5 +1,5 @@
 {
-    "name": "cartalyst/stripe-laravel",
+    "name": "curbngo/stripe-laravel",
     "description": "Laravel 6 integration for the Cartalyst Stripe package.",
     "keywords": [
         "php",
