@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": "^7.2",
-        "cartalyst/stripe": "^2.0",
+        "curbngo/stripe": "^2.0",
         "illuminate/support": "^6.0"
     },
     "require-dev": {
