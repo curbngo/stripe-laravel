@@ -1,14 +1,19 @@
 language: php
 
 php:
-  - 7.1
-
-sudo: false
+  - 7.2
+  - 7.3
+  - 7.4
 
 cache:
   directories:
-    - vendor
     - $HOME/.composer/cache
 
+before_install:
+  - phpenv config-rm xdebug.ini || true
+
 install:
-  - composer install
+  - travis_retry composer install
+
+script:
+  - vendor/bin/phpunit

@@ -1,6 +1,6 @@
 {
-    "name": "curbngo/stripe-laravel",
-    "description": "Laravel 5.8 integration for the Cartalyst Stripe package.",
+    "name": "cartalyst/stripe-laravel",
+    "description": "Laravel 6 integration for the Cartalyst Stripe package.",
     "keywords": [
         "php",
         "cartalyst",
@@ -16,22 +16,33 @@
         }
     ],
     "require": {
-        "php": ">=7.1.3",
-        "illuminate/support": "5.8.*",
-        "curbngo/stripe": "~2.0"
+        "php": "^7.2",
+        "cartalyst/stripe": "^2.0",
+        "illuminate/support": "^6.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "~7.0"
+        "cartalyst/php-cs-fixer-config": "^1.0",
+        "phpunit/phpunit": "^8.0"
     },
     "autoload": {
         "psr-4": {
             "Cartalyst\\Stripe\\Laravel\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Cartalyst\\Stripe\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
     "extra": {
         "component": "implementation",
         "branch-alias": {
-            "dev-master": "10.0.x-dev"
+            "dev-master": "11.0.x-dev"
         },
         "laravel": {
             "providers": [
@@ -42,5 +53,11 @@
             }
         }
     },
-    "minimum-stability": "stable"
+    "scripts": {
+        "cs:check": "./vendor/bin/php-cs-fixer fix --verbose --ansi --show-progress=estimating --diff --dry-run --config .php_cs.php",
+        "cs:fix": "./vendor/bin/php-cs-fixer fix --verbose --ansi --show-progress=estimating --config .php_cs.php",
+        "test": "./vendor/bin/phpunit --verbose --colors=always"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
