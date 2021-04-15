@@ -18,7 +18,7 @@
     "require": {
         "php": "^7.5|^8.0",
         "curbngo/stripe": "^2.0",
-        "illuminate/support": "^6.0"
+        "illuminate/support": "^6.0|^7.0|^8.0"
     },
     "require-dev": {
         "cartalyst/php-cs-fixer-config": "^1.0",
