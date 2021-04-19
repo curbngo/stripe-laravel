@@ -1,5 +1,5 @@
 {
-    "name": "cartalyst/stripe-laravel",
+    "name": "curbngo/stripe-laravel",
     "description": "Laravel 8 integration for the Cartalyst Stripe package.",
     "keywords": [
         "php",
@@ -16,8 +16,8 @@
         }
     ],
     "require": {
-        "php": "^7.3 || ^8.0",
-        "cartalyst/stripe": "^2.0",
+        "php": "^7.2.5 || ^8.0",
+        "curbngo/stripe": "^2.0",
         "illuminate/support": "^8.0"
     },
     "require-dev": {
