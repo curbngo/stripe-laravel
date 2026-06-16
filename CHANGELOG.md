@@ -1,5 +1,14 @@
 # Changelog
 
+### v14.0.0 - 2026-06-16
+
+`REVISED`
+
+- Drop Laravel 8 support
+- Add Laravel 9-13 support on a single branch
+- Upgrade to PHPUnit 10
+- Add GitHub Actions CI matrix for Laravel 9-13
+
 ### v13.1.0 - 2020-12-23
 
 - Add PHP 8 support

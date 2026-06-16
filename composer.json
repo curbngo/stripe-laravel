@@ -1,6 +1,6 @@
 {
     "name": "curbngo/stripe-laravel",
-    "description": "Laravel 8 integration for the Cartalyst Stripe package.",
+    "description": "Laravel 9-13 integration for the Cartalyst Stripe package.",
     "keywords": [
         "php",
         "cartalyst",
@@ -16,13 +16,14 @@
         }
     ],
     "require": {
-        "php": "^7.2.5 || ^8.0",
+        "php": "^8.0",
         "curbngo/stripe": "^2.0",
-        "illuminate/support": "^8.0"
+        "illuminate/support": "^9.0|^10.0|^11.0|^12.0|^13.0"
     },
     "require-dev": {
         "cartalyst/php-cs-fixer-config": "^1.0",
-        "phpunit/phpunit": "^8.0"
+        "orchestra/testbench": "^7.0|^8.0|^9.0|^10.0|^11.0",
+        "phpunit/phpunit": "^10.5"
     },
     "autoload": {
         "psr-4": {
@@ -42,7 +43,7 @@
     "extra": {
         "component": "implementation",
         "branch-alias": {
-            "dev-master": "13.0.x-dev"
+            "dev-master": "14.0.x-dev"
         },
         "laravel": {
             "providers": [
@@ -56,6 +57,6 @@
     "scripts": {
         "cs:check": "./vendor/bin/php-cs-fixer fix --verbose --ansi --show-progress=estimating --diff --dry-run --config .php_cs.php",
         "cs:fix": "./vendor/bin/php-cs-fixer fix --verbose --ansi --show-progress=estimating --config .php_cs.php",
-        "test": "./vendor/bin/phpunit --verbose --colors=always"
+        "test": "./vendor/bin/phpunit --colors=always"
     }
 }
